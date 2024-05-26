@@ -370,27 +370,23 @@ generateSql = async function (data, customer_id, dataBrand) {
           return resolve(genData)
         })
       }
-
-
     }
 
-
-
   })
-
-
-
-
 }
 
 
-main = async function () {
+main = async function (email, pwd, host) {
   
-  let data = callEmail(email, pwd, host, start_date);
+  let data = callEmail(email, pwd, host);
 
   // create query to insert into db
 }
 
-main()
+main('youremail@gmail.com','password','smtp.gmail.com')
+
+
+
+
 
 
